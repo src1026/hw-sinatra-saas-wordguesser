@@ -72,7 +72,7 @@ class WordGuesserApp < Sinatra::Base
   end
 
   get '/win' do
-    # Prevent cheating by redirecting to show page if game isn't actually won
+    # prevent cheating by redirecting to show page if game isn't actually won
     if @game.check_win_or_lose != :win
       redirect '/show'
     else
@@ -81,7 +81,7 @@ class WordGuesserApp < Sinatra::Base
   end
 
   get '/lose' do
-    # Prevent cheating by redirecting to show page if game isn't actually lost
+    # prevent cheating by redirecting to show page if game isn't actually lost
     if @game.check_win_or_lose != :lose
       redirect '/show'
     else
